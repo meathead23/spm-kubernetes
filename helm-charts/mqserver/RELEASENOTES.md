@@ -8,6 +8,10 @@
 
 # Version History
 
+## Unreleased
+
+* Ensure directory structure exists on NFS share to enable use of dynamic storage provisioners
+
 ## v1.9.0
 
 * Adds values from `podAnnotations` at deployment
