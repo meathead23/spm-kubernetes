@@ -1,7 +1,7 @@
 {{ $apps := .Values.global.apps.config }}
 {{- range $name, $app := $apps }}
 {{- if and ($app.enabled) (not (hasKey $app "mqConnectionNameList")) }}
-{{- if and ($.Values.global.mq.multiInstance.nfsEnabled) (not ($.Values.global.mq.multiInstance.storageClassName)) }}
+{{- if and ($.Values.global.mq.multiInstance.nfsEnabled) (not ($.Values.global.mq.multiInstance.useDynamicProvisioning)) }}
 ---
 ###############################################################################
 # Copyright 2019,2021 IBM Corporation
